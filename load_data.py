@@ -36,14 +36,19 @@ def load_data(all_data = False, explode = False, save = False):
     
     with open(configs.get("SEQ_LOCATION").data, 'rb') as file:
         dna_dict =  pickle.load(file)
+    with open(configs.get("BODY_WEIGHT_LOCATION").data, 'rb') as file:
+        df =  pickle.load(file)
+        
     dna = pd.Series({k:seq2kmer(str(v.seq), 6) for k,v in dna_dict.items()})
     dna.name = "dna_seq"
-    df = pd.read_csv(configs.get("BODY_WEIGHT_LOCATION").data)
     df = df.merge(dna, left_on="gene_symbol", right_index=True)
-    df = df[df["zygosity"] == "homozygote"]
+    df.to_csv("cleaned/full_dataset.csv")
+
     #Randomize the order
     df = df.sample(frac=1)
     df_len = len(df)
+    
+    
     
     if all_data:
         train = df[:int(np.round(df_len*.8))].copy()
@@ -80,6 +85,7 @@ def create_dataset():
     train = pd.read_csv("cleaned/train.csv").sample(frac=1)
     val = pd.read_csv("cleaned/val.csv").sample(frac=1)
     test = pd.read_csv("cleaned/test.csv").sample(frac=1)
+    
     train = reduce_data(train).map(tokenize_function, batched=True)
     val = reduce_data(val).map(tokenize_function, batched=True)
     test = reduce_data(test).map(tokenize_function, batched=True)
