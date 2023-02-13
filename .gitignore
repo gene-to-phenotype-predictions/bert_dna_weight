@@ -5,6 +5,9 @@ __pycache__/
 
 # C extensions
 *.so
+data/
+weight_model/
+clean/
 
 # Distribution / packaging
 .Python
