@@ -82,7 +82,7 @@ def tokenize_function(df):
     return tokenizer(df["dna_seq"], padding=True, truncation=True, max_length=512)#512
 
 def create_dataset():
-    train = pd.read_csv("cleaned/train.csv").sample(frac=1)
+    train = pd.read_csv("cleaned/train.csv").sample(frac=.1)
     val = pd.read_csv("cleaned/val.csv").sample(frac=1)
     test = pd.read_csv("cleaned/test.csv").sample(frac=1)
     

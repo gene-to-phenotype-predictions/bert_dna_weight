@@ -8,6 +8,10 @@ __pycache__/
 data/
 weight_model/
 cleaned/
+wandb/
+credentials.json
+*/onnx
+token.json
 
 # Distribution / packaging
 .Python
@@ -134,3 +138,4 @@ dmypy.json
 .csv
 .pkl
 
+*.onnx
