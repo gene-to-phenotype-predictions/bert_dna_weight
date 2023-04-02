@@ -34,7 +34,7 @@ capstone_body_weight_Statistical_effect_size_analysis_genotype_early_adult_scale
 
 ```
 
-Then Open up the [FILE NAME] file, make sure your using the same venv you ran the requirements.txt file in. 
+Then Open up the DNASeq2Weight.ipynb notebook, make sure your using the same venv you ran the requirements.txt file in. 
 
 Replace the "entity" value in the file with your account name that you setup for wandb. For instance if account was "test-user" then it should look like: 
 
@@ -52,7 +52,7 @@ Note: wandb may prompt you to login the first time it encounters the "init" meth
 This model actually takes the contact map version of the protien sequences and uses that as the input. So in order to use this we must first convert our protien sequences into contact maps. 
 
 You will need: 
-1. Download all the data from [INSERT LINK] and place them in the folder "MouseGenome"
+1. Download all the data from https://www.uniprot.org/proteomes/UP000002494 and place them in the folder "MouseGenome"
 2. Download and follow the setup instructions for https://github.com/kianho/pconpy Note: If your on windows use WSL and execute in the linux shell. 
 
 Now we need to convert the .pbd files we got from Alpha Fold and convert them to contact maps. 
