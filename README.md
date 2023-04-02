@@ -6,19 +6,19 @@ This project contain two different model to predict the change in weight a mouse
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/gene-to-phenotype-predictions/bert_dna_weight.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd bert_dna_weight
 ```
 
 Install dependencies
 
 ```bash
-  npm install
+  pip install requirements.txt
 ```
 
 Finally setup your own wandb account that will log the details of your execution. You can follow instructions here: https://docs.wandb.ai/quickstart 
