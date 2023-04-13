@@ -108,7 +108,10 @@ train_loop(config) will just run a single training loop with the hyperparemeters
 
 
 
+# Results 
+[Protien Model](https://wandb.ai/pcoady/Protein-Weightt/sweeps)
 
+[DNA Model](https://wandb.ai/pcoady/DNA-Weight?workspace=default)
 
 
 
