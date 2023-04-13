@@ -23,6 +23,10 @@ Install dependencies
 
 Finally setup your own wandb account that will log the details of your execution. You can follow instructions here: https://docs.wandb.ai/quickstart 
 
+
+## Data 
+All data can be accessed [here](https://drive.google.com/drive/folders/1Exv-jo6RlcHdD5fPYqSA0v3TN0FGducF?usp=share_link) or by following the download instructions below from the original sources
+
 ## DNA Sequence to Weight
 
 For this model you need the following data files to be place into ./data/ folder
