@@ -52,7 +52,7 @@ Finally you just need to "run all" in your notebook and the results will be logg
 Note: wandb may prompt you to login the first time it encounters the "init" method, you should only have to do this once as it will save your key locally. 
 
 
-## Protien Sequence to Weight
+## Protein Sequence to Weight
 This model actually takes the contact map version of the protien sequences and uses that as the input. So in order to use this we must first convert our protien sequences into contact maps. 
 
 You will need: 
